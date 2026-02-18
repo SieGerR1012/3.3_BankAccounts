@@ -5,8 +5,11 @@ public class CreditAccount extends Account {
 
     public boolean pay(int amount){
         balance -= amount;
+        if (balance > 0){
+            balance = 0;
+        }
         System.out.println("Оплата Кредитного счета на " + amount);
-        return false;
+        return true;
     }
 
     public boolean addMoney(int amount){
